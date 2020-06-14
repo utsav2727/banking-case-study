@@ -5,7 +5,8 @@ from datetime import datetime
 #make application using Flask
 app = Flask(__name__)
 app.secret_key = 'super secret key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost:3307/cs'
+#connect localhost mysql(db name = cs)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/cs'
 db = SQLAlchemy(app)
 
 class Newcustomer(db.Model):
